@@ -14,13 +14,12 @@ public class TimeCounter : MonoBehaviour
     {
         // generates random game time to play
         GameTime = Random.Range(minTimeRange, maxTimeRange);
-        InvokeRepeating("TimeUpdate", 0, 10.0f);
+        InvokeRepeating("TimeUpdate", 0, 1.0f);
     }
 
     // Update is called once per frame
     void Update()
     {
-        TimeUpdate();
 
     }
 
