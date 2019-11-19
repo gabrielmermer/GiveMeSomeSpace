@@ -8,10 +8,14 @@ public class TimeCounter : MonoBehaviour
     public Text TimeText;
     [SerializeField] int minTimeRange;
     [SerializeField] int maxTimeRange;
-    int GameTime;
+    public int GameTime;
+
+
+
     // Start is called before the first frame update
     void Start()
     {
+        int Score = gameObject.GetComponent<SpaceClicker>().SpaceClickCounter;
         // generates random game time to play
         GameTime = Random.Range(minTimeRange, maxTimeRange);
         InvokeRepeating("TimeUpdate", 0, 1.0f);
